@@ -140,6 +140,7 @@
         },
         {
             "Action": [
+                "iam:GetRole",
                 "iam:CreateInstanceProfile",
                 "iam:DeleteInstanceProfile",
                 "iam:GetInstanceProfile",
