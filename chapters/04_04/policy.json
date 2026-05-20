@@ -160,7 +160,8 @@
                 "iam:PutRolePolicy",
                 "iam:GetRolePolicy",
                 "iam:DeleteRolePolicy",
-                "iam:ListRolePolicies"
+                "iam:ListRolePolicies",
+                "iam:ListAttachedRolePolicies"
             ],
             "Effect": "Allow",
             "Resource": "*",
