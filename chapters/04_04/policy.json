@@ -152,7 +152,9 @@
                 "iam:AddRoleToInstanceProfile",
                 "iam:RemoveRoleFromInstanceProfile",
                 "iam:TagInstanceProfile",
-                "iam:UntagInstanceProfile"
+                "iam:UntagInstanceProfile",
+                "iam:TagRole",
+                "iam:UntagRole"
             ],
             "Effect": "Allow",
             "Resource": "*",
