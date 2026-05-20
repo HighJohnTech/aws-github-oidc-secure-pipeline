@@ -154,7 +154,8 @@
                 "iam:TagInstanceProfile",
                 "iam:UntagInstanceProfile",
                 "iam:TagRole",
-                "iam:UntagRole"
+                "iam:UntagRole",
+                "iam:PassRole"
             ],
             "Effect": "Allow",
             "Resource": "*",
