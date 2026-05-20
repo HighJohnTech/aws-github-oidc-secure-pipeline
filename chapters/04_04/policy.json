@@ -137,6 +137,33 @@
             "Effect": "Allow",
             "Resource": "*",
             "Sid": "ReadOnlyDataSources"
+        },
+        {
+            "Action": [
+                "iam:CreateInstanceProfile",
+                "iam:DeleteInstanceProfile",
+                "iam:GetInstanceProfile",
+                "iam:ListInstanceProfiles",
+                "iam:ListInstanceProfilesForRole",
+                "iam:AddRoleToInstanceProfile",
+                "iam:RemoveRoleFromInstanceProfile",
+                "iam:TagInstanceProfile",
+                "iam:UntagInstanceProfile"
+            ],
+            "Effect": "Allow",
+            "Resource": "*",
+            "Sid": "InstanceProfileManagement"
+        },
+        {
+            "Action": [
+                "iam:PutRolePolicy",
+                "iam:GetRolePolicy",
+                "iam:DeleteRolePolicy",
+                "iam:ListRolePolicies"
+            ],
+            "Effect": "Allow",
+            "Resource": "*",
+            "Sid": "InlinePolicyManagement"
         }
     ],
     "Version": "2012-10-17"
