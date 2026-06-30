@@ -6,7 +6,7 @@ This is the repository for the LinkedIn Learning course `Build Secure AWS Pipeli
 
 ## Course Description
 
-Learn how to build secure CI/CD pipelines using GitHub Actions and AWS OIDC (OpenID Connect) — eliminating the need for long-lived AWS access keys. The course walks through deploying a web application (Vervium UI) to AWS using Terraform, progressing from IAM user credentials to a fully OIDC-based workflow.
+In this course, join senior cloud security engineer, speaker, instructor, and career advisor Damien Burks  as he shows you how to modernize and secure CI/CD delivery by replacing long‑lived AWS credentials with identity federation through OpenID Connect (OIDC). In today’s cloud environments, traditional secrets‑based authentication increases risk, adds operational overhead, and makes pipelines difficult to audit. Damien covers the essentials of how OIDC works, why AWS advocates for it, and how to implement it step‑by‑step inside GitHub Actions workflows.</p><p>This course is an ideal fit for DevSecOps and DevOps engineers, cloud practitioners, software developers, security engineers, and site reliability engineers.
 
 ## Prerequisites
 
@@ -101,5 +101,5 @@ Sr. Cloud Security Engineer & Founder of The DevSec Blueprint
 Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/damien-burks).
 
 [0]: # "Replace these placeholder URLs with actual course URLs"
-[lil-course-url]: https://www.linkedin.com/learning/
-[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D4E0DAQG0eDHsyOSqTA/learning-public-crop_675_1200/B4EZVdqqdwHUAY-/0/1741033220778?e=2147483647&v=beta&t=FxUDo6FA8W8CiFROwqfZKL_mzQhYx9loYLfjN-LNjgA
+[lil-course-url]: https://www.linkedin.com/learning/build-secure-aws-pipelines-with-github-actions-and-oidc
+[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D4E0DAQFxa0iR2HnxSA/learning-public-crop_675_1200/B4EZ7wYv2rIAAY-/0/1782149480540?e=2147483647&v=beta&t=T51OoLDiCE5U0QbjvyxRRzo8EJj0zlgSmjvOUQwKelo
