@@ -12,9 +12,9 @@ variable "aws_region" {
 
 # EC2 Instance Type Variable
 # Defines the size/capacity of the EC2 instance
-# t2.micro is free tier eligible and sufficient for a simple web server demonstration
+# t3.micro is free tier eligible and sufficient for a simple web server demonstration
 variable "instance_type" {
   description = "EC2 instance type"
   type        = string
-  default     = "t2.micro"
+  default     = "t3.micro"
 }
