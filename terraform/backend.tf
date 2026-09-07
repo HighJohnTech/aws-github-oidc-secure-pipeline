@@ -13,7 +13,7 @@
 # Prerequisites:
 # 1. Create an S3 bucket for state storage
 # 2. Create a DynamoDB table for state locking (optional but recommended)
-# 3. Ensure IAM permissions allow access to S3 and DynamoDB
+# 3. Ensure IAM permissions allow access to S3  DynamoDB
 #
 # To create the required resources:
 # 
@@ -49,11 +49,11 @@
 terraform {
   backend "s3" {
     # S3 bucket name
-    bucket = "terraform-state-379755567541-us-east-1-an"
+    bucket = "hjt-oidc-tfstate-20250906-mart"
     
     # Path within the bucket where the state file will be stored
     # Using a descriptive path helps organize multiple projects
-    key = "linkedin-learning-oidc/terraform.tfstate"
+    key = "hjt-oidc-pipeline/terraform.tfstate"
     
     # AWS region where the S3 bucket is located
     region = "us-east-1"

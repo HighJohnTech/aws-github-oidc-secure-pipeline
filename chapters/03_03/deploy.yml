@@ -40,13 +40,15 @@ jobs:
       # Prerequisites:
       # - AWS OIDC provider must be configured in your AWS account
       # - IAM role must exist with trust policy allowing GitHub Actions
-      # - Replace ACCOUNT_ID with your AWS account ID
-      # - Replace role name if you used a different name
+      # - AWS_OIDC_ROLE_ARN repository variable must contain the IAM role ARN
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v6.2.3
         with:
           role-to-assume: ${{ vars.AWS_OIDC_ROLE_ARN }}
           aws-region: us-east-1
+
+      - name: Verify AWS Identity
+        run: aws sts get-caller-identity
 
       # ========================================================================
       # Step 2: Checkout Repository
