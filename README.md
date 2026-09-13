@@ -1,6 +1,22 @@
 # Build Secure AWS Pipelines with GitHub Actions and OIDC
 
-This is the repository for the LinkedIn Learning course `Build Secure AWS Pipelines with GitHub Actions and OIDC`. The full course is available from [LinkedIn Learning][lil-course-url].
+A hands-on DevSecOps project implementing passwordless AWS authentication for GitHub Actions using OpenID Connect (OIDC), AWS STS, scoped IAM permissions, Terraform, and CloudTrail auditing.
+
+The pipeline deploys AWS infrastructure without storing long-lived AWS access keys in GitHub and includes automated deployment, validation, troubleshooting documentation, and secure infrastructure teardown.
+
+## Project Highlights
+
+- Replaced long-lived AWS credentials with GitHub Actions OIDC federation
+- Configured AWS STS temporary role assumption
+- Restricted IAM trust to the approved GitHub repository and `main` branch
+- Used scoped deployment permissions instead of `AdministratorAccess`
+- Deployed infrastructure through Terraform and GitHub Actions
+- Stored Terraform state in a private, encrypted, versioned S3 bucket
+- Verified the assumed AWS identity with `aws sts get-caller-identity`
+- Validated AWS-side authentication activity through CloudTrail
+- Troubleshot real IAM ARN and EC2 Free Tier deployment failures
+- Implemented automated infrastructure teardown and cleanup
+- Documented the security model, troubleshooting process, and deployment validation
 
 ## Course Attribution
 
