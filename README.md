@@ -2,6 +2,72 @@
 
 This is the repository for the LinkedIn Learning course `Build Secure AWS Pipelines with GitHub Actions and OIDC`. The full course is available from [LinkedIn Learning][lil-course-url].
 
+## Course Attribution
+
+This project began as a fork of LinkedIn Learning's
+"Build Secure AWS Pipelines with GitHub Actions and OIDC"
+lab by Damien Burks.
+
+The course repository supplied the starter Terraform infrastructure and
+reference workflows. We used that environment to implement, update,
+test, harden, troubleshoot, audit, and document a current GitHub Actions
+OIDC integration with AWS.
+
+## What We Implemented
+
+- GitHub Actions OIDC federation with AWS
+- No long-lived AWS access keys stored in GitHub
+- Repository and branch-restricted IAM trust
+- Temporary AWS STS credentials
+- Scoped deployment permissions instead of AdministratorAccess
+- Private encrypted/versioned Terraform remote state
+- AWS CloudTrail audit verification
+- Terraform deployment and automated teardown
+- Updated EC2 configuration for current AWS Free Tier eligibility
+
+
+## Architecture
+
+```text
+GitHub Actions
+      |
+      | OIDC token
+      v
+GitHub OIDC Provider
+      |
+      v
+AWS STS
+      |
+      | temporary credentials
+      v
+GitHubActionsOIDCDeployer
+      |
+      | scoped IAM permissions
+      v
+Terraform
+      |
+      v
+AWS Infrastructure
+      |
+      v
+CloudTrail Audit Evidence
+
+```
+
+## Troubleshooting Highlights
+
+During implementation, we resolved:
+- An invalid AWS OIDC role ARN configuration
+- A Terraform deployment failure caused by an outdated t2.micro Free Tier assumption
+- Updated the deployment to use t3.micro for the current AWS account
+
+## Project Documentation
+
+- [Security Model](docs/security-model.md)
+- [Troubleshooting](docs/troubleshooting.md)
+- [Deployment Validation](docs/deployment-validation.md)
+
+
 ![lil-thumbnail-url]
 
 ## Course Description
